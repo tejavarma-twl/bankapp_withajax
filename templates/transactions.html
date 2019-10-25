@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 12px 12px;
+  border:2px solid #ccc;
+  border-top: none;
+}
+.tabcontent table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.tabcontent th td {
+  text-align: left;
+  padding: 16px;
+}
+
+.tabcontent tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+</style>
+  <title>Mytransactions</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body class="container">
+    <div style="text-align:center;">
+        <h1>Welcome User</h1> <br>
+    </div>
+    <div style="position: absolute;right: 10px;;top: 0px;">
+        <a href="" style="text-align: right"><h5>Logout</h5></a>
+    </div>
+    <ul class="nav nav-pills nav-fill" style="    background-color: lavender;
+    margin: 10px;
+    border-radius: 10px;">
+            <li class="nav-item">
+              <a class="nav-link active" href="/" style="font-weight: bold">Account summary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/addBeneficiary" style="font-weight: bold">Add Beneficiary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-weight: bold">Fund Transfer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="/settings" tabindex="-1" aria-disabled="true" style="font-weight: bold">Settings</a>
+            </li>
+          </ul>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Transactions')">Transactions</button>
+  <button class="tablinks" onclick="openCity(event, 'Account details')">Account details</button>
+  <button class="tablinks" onclick="openCity(event, 'Staments')">Statements</button>
+</div>
+
+<div id="Transactions" class="tabcontent">
+	<p id="p1"></p>
+<button class="tabcontent1" onclick="opentran()">Last Transactions</button>
+<table id="transition">
+  <tr>
+    <th>Date</th>
+    <th>Type</th>
+    <th>Details</th>
+    <th>Deposite</th>
+    <th>Withdrawals</th>
+    <th>Balance</th>
+  </tr>
+  <tr>
+    <td>  01 Apr 2018</td>
+    <td>  Debit</td>
+    <td>  Media3</td>
+    <td>  100000</td>
+    <td>        </td>
+    <td>  200000</td>
+  </tr>
+  <tr>
+     <td>  02 Apr 2018</td>
+    <td>  Debit</td>
+    <td>  Media3</td>
+    <td>  100000</td>
+    <td>        </td>
+    <td>  100000</td>
+  </tr>
+  <tr>
+     <td>  03 Apr 2018</td>
+    <td>  Debit</td>
+    <td>  Media3</td>
+    <td>  100000</td>
+    <td>        </td>
+    <td>  0</td>
+  </tr>
+</table>
+</div>
+
+<div id="Account details" class="tabcontent">
+  
+</div>
+
+<div id="Staments" class="tabcontent">
+  
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+var x = ["sunday","monday","tues","wed","thur","fri","sat"];
+		var y = new Date();
+		var z = y.setFullYear(2020, 1, 18); 
+		document.getElementById('p1').innerHTML=y;
+function opentran() {
+  var x = document.getElementById("transition");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+   
+</body>
+</html>

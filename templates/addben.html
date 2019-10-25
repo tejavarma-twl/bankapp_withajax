@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<title>Add Beneficiary</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+</head>
+<body>
+<ul class="nav nav-pills nav-fill" style="    background-color: lavender;
+        margin: 10px;
+        border-radius: 10px; margin-top: 30px">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/" style="font-weight: bold">Account summary</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/addBeneficiary" style="font-weight: bold">Add Beneficiary</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="font-weight: bold">Fund Transfer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/settings" style="font-weight: bold">Settings</a>
+                </li>
+</ul>
+	<div style="position: absolute;right: 10px;;top: 0px;">
+        <a href="" style="text-align: right">Logout</a>
+    </div>
+<div class="container">
+<div class="row" style="margin-top: 30px">
+  <div class="col-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#Add" role="tab" aria-controls="v-pills-profile" aria-selected="false">Add Beneficiary</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#listB" role="tab" aria-controls="v-pills-messages" aria-selected="false">View List of Beneficiary</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Third Party Fund Transfer</a>
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="v-pills-home-tab">abc</div>
+      <div class="tab-pane fade show active" id="Add" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+	
+<h3 style="color:blue;">Add a Beneficiary</h3>
+<form style="border:1px solid black; padding:5px;">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-4 col-form-label">Beneficiary Type</label>
+    <div class="col-sm-8">
+      <select class="custom-select">
+  <option selected>Open this select menu</option>
+  <option value="1">Transfer with in the Bank</option>
+  <option value="2">Transfer to other Banks</option>
+  
+</select>
+
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-4 col-form-label">Beneficiary Account No</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="" class="col-sm-4 col-form-label">Re-enter Beneficiary Account No</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="" class="col-sm-4 col-form-label">IFSC Code</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-4 col-form-label">Beneficiary Name</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="" class="col-sm-4 col-form-label">Email ID</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="">
+    </div>
+  </div>
+   
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Add Beneficiary</button>
+    </div>
+  </div>
+</form><br><br>
+<h6>Note:</h6>
+
+<ul>
+  <li><p>Please ensure that the beneficiary Account no that you enter is correct.
+HDFC Bank will not validate a non HDFC Bank account no
+and not responsible for funds transferred to an unintended recipient.</p></li>
+  <li>For Credit Card Payments please refer to the specific IFSC Code</li>
+  
+</ul>  
+
+
+
+</div>
+      <div class="tab-pane fade" id="listB" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Select</th>
+      <th scope="col">Beneficiary Name</th>
+      <th scope="col">Beneficiary Account No</th>
+      <th scope="col">Beneficiary Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><input type="checkbox" name="" value=""></th>
+      <td>Mark</td>
+      <td>01223</td>
+      <td>Active</td>
+    </tr>
+    <tr>
+      <th scope="row"><input type="checkbox" name="" value=""></th>
+      <td>Jacob</td>
+      <td>958945</td>
+      <td>Active</td>
+    </tr>
+    <tr>
+      <th scope="row"><input type="checkbox" name="" value=""></th>
+      <td>Larry</td>
+      <td>8484884</td>
+      <td>Active</td>
+    </tr>
+  </tbody>
+</table></div>
+      <div class="tab-pane fade" id="fund" role="tabpanel" aria-labelledby="v-pills-settings-tab">djdj</div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+<script>
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+</html>

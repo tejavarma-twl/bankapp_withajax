@@ -1,0 +1,131 @@
+* {
+	margin: 0px; 
+	padding: 0px;
+}
+.dmain{
+    width: 100%;
+}
+
+.d1{
+    width: 100%;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+    background-color: #fff;
+    
+}
+
+.s1{
+    width: 40%;
+    height: 550px;
+    background-color: #26521e;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 50px;
+    
+}
+
+.sp1{
+    display: inline-block;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: -62px;
+    
+}
+
+.f{
+    width: 50%;
+    margin: auto;
+    margin-top: 180px;
+
+}
+.btn{
+    border: 1px solid white;
+    color: white;
+    width: 150px;
+    margin: 30px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #26521e;
+}
+
+.btn:hover{
+        background-color: #fff;
+        color:black !important;
+}
+
+.input100 input {
+    font-size: 15px;
+    color: #1b3815;
+    line-height: 1.2;
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 55px;
+    background: #ebebeb;
+    border-radius: 27px;
+    padding: 0 35px 0 35px;
+    margin: auto;
+    border: none;
+}
+
+.input1001 input {
+    font-size: 15px;
+    color: #1b3815;
+    line-height: 1.2;
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 55px;
+    background: #ebebeb;
+    border-radius: 27px;
+    padding: 0 35px 0 35px;
+    margin: auto;
+    margin-top: 30px;   
+    border: none;
+}
+.fgpass{
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+}
+
+.fup{ 
+    display: inline-block !important;
+    color: #fff !important;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fup:hover{
+    text-decoration: none;
+    color: #ebc622 !important;
+}
+.sinup{
+    color: #fff !important;
+    margin-top: 20px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sinup a{
+    color: #fff !important;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sinup a:hover{
+    text-decoration: none;
+    color: #ebc622 !important;
+}

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css"> 
+    </head>
+    <body>
+        <div class="dmain"> 
+            <div class="d1">
+                <div class="s1">
+                    <center><span class="sp1">login.</span></center>
+                    <div class="f">
+                        <form method="POST">
+                        {% csrf_token %}
+                            <div class="input100">
+                                <input class="usr" type="text" name="username" placeholder="username">
+                            </div>
+                            <div class="input1001">
+                                <input class="pss" type="password" name="password" placeholder="password">
+                            </div>
+                            <div class="fgpass">
+                                <a class="fup" href="#">forgot username/password</a>
+                            </div>
+                            <center><button class="btn" type="submit">login</button></center>
+                            <p class="sinup">new user?  <a href="/signup">signup</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>

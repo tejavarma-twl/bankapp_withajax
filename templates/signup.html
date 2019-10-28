@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title></title>
+      <title>Signup</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -79,23 +79,19 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      // function choosebranch(){
-      //   var bank = document.getElementById('inputBank').value;
-      //   console.log(bank)
-      // }
       $(document).ready(function() { 
-          $("#inputBank").change(function() { 
-            var bank = $("#inputBank").val();
-            $('#inputBranch').html('<option selected>Choose branch</option>')
-            $.ajax({
-                url: "http://127.0.0.1:8000/getbranches?bank="+bank,  
-                success: function(res) {
-                  res.forEach(item => {
-                    $('#inputBranch').append(`<option value="${item.id}">${item.bank_branch}</option>`);  
-                  });
-                  }
-                });
-          }); 
+        $("#inputBank").change(function() { 
+          var bank = $("#inputBank").val();
+          $('#inputBranch').html('<option selected>Choose branch</option>')
+          $.ajax({
+            url: "http://127.0.0.1:8000/getbranches?bank="+bank,  
+            success: function(res) {
+              res.forEach(item => {
+                $('#inputBranch').append(`<option value="${item.id}">${item.bank_branch}</option>`);  
+              });
+              }
+            });
+        }); 
       }); 
     </script>
   </body>

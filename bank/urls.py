@@ -23,5 +23,6 @@ urlpatterns = [
     path('logout',user_logout),
     path('dashboard',dashboard),
     path('getbranches',getbranches),
+    path('addben',addben),
     path('admin/', admin.site.urls),
 ]
